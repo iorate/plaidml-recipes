@@ -1,0 +1,23 @@
+package:
+  name: plaidbench
+  version: 0.3.5
+
+build:
+  entry_points:
+    - plaidbench = plaidbench.cli:plaidbench
+  include_recipe: False
+  number: 0
+  script: pip install --no-deps https://files.pythonhosted.org/packages/ab/0e/004f28dae8d6d5f81ad344d29f633d365b1a3d0bf1c5bf518c22032b18ae/plaidbench-0.3.5-py2.py3-none-any.whl
+
+requirements:
+  build:
+    - python
+    - pip
+  run:
+    - python
+    - click >=6.0.0
+    - h5py >=2.7.0
+    - numpy
+    - plaidml
+    - requests 2.18.4
+    - six

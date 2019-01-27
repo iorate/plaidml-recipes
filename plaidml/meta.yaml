@@ -1,0 +1,20 @@
+package:
+  name: plaidml
+  version: 0.3.5
+
+build:
+  include_recipe: False
+  number: 0
+  script: pip install --no-deps https://files.pythonhosted.org/packages/15/5a/cd5f13b035c44a09df542a2248eaa6fd69d980b42592fdb750d1858b8a03/plaidml-0.3.5-py2.py3-none-win_amd64.whl # [win64]
+  script: pip install --no-deps https://files.pythonhosted.org/packages/a8/7e/d9f8280a035434132b3c9463c05dfe0150e4b10ca5c2a94a642683d18c90/plaidml-0.3.5-py2.py3-none-macosx_10_10_x86_64.whl # [osx]
+  script: pip install --no-deps https://files.pythonhosted.org/packages/ed/93/4eb2a549b242de8c0dd263d8ad6538dcc44c6e0d1834a2263235a536ec13/plaidml-0.3.5-py2.py3-none-manylinux1_x86_64.whl # [linux64]
+
+requirements:
+  build:
+    - python
+    - pip
+  run:
+    - python
+    - numpy
+    - requests
+    - six
