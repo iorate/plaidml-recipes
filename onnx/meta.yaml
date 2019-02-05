@@ -1,0 +1,24 @@
+package:
+  name: onnx
+  version: 1.2.1
+
+build:
+  entry_points:
+    - backend-test-tools = onnx.backend.test.cmd_tools:main
+    - check-model = onnx.bin.checker:check_model
+    - check-node = onnx.bin.checker:check_node
+  include_recipe: False
+  number: 0
+  script: pip install --no-deps https://files.pythonhosted.org/packages/9c/bb/0e5ad3ab044eafe622317d8505441c507f5c9d2a87c7658828d1c760e57f/onnx-1.2.1-cp36-cp36m-win_amd64.whl # [win64 and py36]
+  script: pip install --no-deps https://files.pythonhosted.org/packages/bc/56/d6b6801b801dc838ed8d00a15caede2ba7ff5f614160278354528b5412f6/onnx-1.2.1-cp36-cp36m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl # [osx and py36]
+  script: pip install --no-deps https://files.pythonhosted.org/packages/65/ec/ac7bf5def84611ab0db811005b9da30f95c577aa9047ecbcbdfd31efce2c/onnx-1.2.1-cp36-cp36m-manylinux1_x86_64.whl # [linux64 and py36]
+
+requirements:
+  build:
+    - python
+    - pip
+  run:
+    - python
+    - protobuf
+    - numpy
+    - six
