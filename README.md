@@ -6,7 +6,7 @@ conda install conda-build
 conda config --add channels file:///path/to/anaconda/conda-bld
 
 cd /path/to/plaidml-recipes
-conda build plaidml keras plaidml-keras onnx-plaidml plaidbench
+conda build plaidml keras plaidml-keras onnx onnx-plaidml plaidbench
 
 conda install plaidml-keras onnx-plaidml plaidbench
 ```
