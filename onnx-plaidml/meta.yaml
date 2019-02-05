@@ -1,15 +1,13 @@
 package:
   name: onnx-plaidml
-  version: 0.3.4 # [win]
-  version: 0.3.5 # [not win]
+  version: 0.5.0
 
 build:
   entry_points:
     - convert-onnx-to-tile = onnx_plaidml.conversion:onnx_to_tile
   include_recipe: False
   number: 0
-  script: pip install --no-deps https://files.pythonhosted.org/packages/37/95/f35b0e380d49f483ac5cde4972907b7a0b3bd14f5fc2d029b9f3f39c6305/onnx_plaidml-0.3.4-py2.py3-none-any.whl # [win]
-  script: pip install --no-deps https://files.pythonhosted.org/packages/f5/80/9b6af04ff948126f87e155f8fea02063829a1d1882add77eee4925563c50/onnx_plaidml-0.3.5-py2.py3-none-any.whl # [not win]
+  script: pip install --no-deps https://files.pythonhosted.org/packages/20/f4/817cac51f5839102cc30747e66c50876f9ca37250b0f9136ddd57ab34413/onnx_plaidml-0.5.0-py2.py3-none-any.whl
 
 requirements:
   build:
@@ -19,8 +17,6 @@ requirements:
     - python
     - click
     - numpy
-    - onnx >=1.1.0 # [win]
-    - onnx 1.2.1 # [not win]
-    - plaidml # [win]
-    - plaidml >=0.3.3 # [not win]
+    - onnx 1.2.1
+    - plaidml >=0.3.3
     - six
