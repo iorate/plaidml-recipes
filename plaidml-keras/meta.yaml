@@ -1,12 +1,12 @@
 package:
   name: plaidml-keras
-  version: 0.3.5
+  version: 0.5.0
 
 build:
   include_recipe: False
   noarch: python
   number: 0
-  script: pip install --no-deps https://files.pythonhosted.org/packages/97/39/f53511f15c71280449bb01e2f7825e90c1e42d4ff2e5b1afedef82b926d9/plaidml_keras-0.3.5-py2.py3-none-any.whl
+  script: pip install --no-deps https://files.pythonhosted.org/packages/17/34/4102261e3d8867c31bae9f4def5d7e700fc25fff232fa1780040e8ed79b0/plaidml_keras-0.5.0-py2.py3-none-any.whl
 
 requirements:
   build:
@@ -15,5 +15,5 @@ requirements:
   run:
     - python
     - plaidml
-    - keras 2.2.2
+    - keras 2.2.4
     - six

@@ -1,13 +1,13 @@
 package:
   name: plaidbench
-  version: 0.3.5
+  version: 0.5.0
 
 build:
   entry_points:
     - plaidbench = plaidbench.cli:plaidbench
   include_recipe: False
   number: 0
-  script: pip install --no-deps https://files.pythonhosted.org/packages/ab/0e/004f28dae8d6d5f81ad344d29f633d365b1a3d0bf1c5bf518c22032b18ae/plaidbench-0.3.5-py2.py3-none-any.whl
+  script: pip install --no-deps https://files.pythonhosted.org/packages/8f/3b/b2fa2d815656e7b69b1d8d737865ac2dd48c656f34bca5642f116e9d0678/plaidbench-0.5.0-py2.py3-none-any.whl
 
 requirements:
   build:
@@ -16,8 +16,10 @@ requirements:
   run:
     - python
     - click >=6.0.0
+    - colorama
     - h5py >=2.7.0
     - numpy
     - plaidml
     - requests 2.18.4
     - six
+    - unittest2
